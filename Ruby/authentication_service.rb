@@ -8,10 +8,6 @@ class AuthenticationService
   def new_authenticated?(role, user_id)
     user_id == 12345
   end
-
-  def authenticated?(user_id)
-    user_id == 12345
-  end
 end
 
 class AuthenticationClient
