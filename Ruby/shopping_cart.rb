@@ -14,15 +14,15 @@ class ShoppingCart
   end
 
   def number_of_products
-    1
+    @prices.size
   end
 
   def calculate_total_price
-    @price
+    @prices.sum
   end
 
   def has_discount?
-    @price >= 100
+    @prices.sum >= 100
   end
 end
 
