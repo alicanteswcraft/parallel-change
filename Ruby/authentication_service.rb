@@ -20,14 +20,14 @@ class AuthenticationClient
   end
 
   def run
-    authenticated = @authentication_service.authenticated?(33)
+    authenticated = @authentication_service.new_authenticated?(:role, 33)
     puts "authenticated: #{authenticated}"
   end
 end
 
 class YetAnotherClient
   def run
-    AuthenticationService.new.authenticated?(100)
+    AuthenticationService.new.new_authenticated?(:role, 100)
   end
 end
 

@@ -5,7 +5,7 @@ describe "Authenticator" do
     it "is always authenticated" do
       service = AuthenticationService.new
       admin_id = 12345
-      expect(service.authenticated?(admin_id)).to be true
+      expect(service.new_authenticated?(:role, admin_id)).to be true
     end
   end
 
@@ -13,7 +13,7 @@ describe "Authenticator" do
     it "is not authenticated initially" do
       service = AuthenticationService.new
       user_id = 11111
-      expect(service.authenticated?(user_id)).to be false
+      expect(service.new_authenticated?(:role, user_id)).to be false
     end
   end
 end
