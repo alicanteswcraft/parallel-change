@@ -5,7 +5,7 @@ class AuthenticationService
   # def authenticated?(role, user_id)
   #
   
-  def new_authenticated?(role, user_id)
+  def authenticated?(role, user_id)
     user_id == 12345
   end
 end
@@ -16,14 +16,14 @@ class AuthenticationClient
   end
 
   def run
-    authenticated = @authentication_service.new_authenticated?(:role, 33)
+    authenticated = @authentication_service.authenticated?(:role, 33)
     puts "authenticated: #{authenticated}"
   end
 end
 
 class YetAnotherClient
   def run
-    AuthenticationService.new.new_authenticated?(:role, 100)
+    AuthenticationService.new.authenticated?(:role, 100)
   end
 end
 
