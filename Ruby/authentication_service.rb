@@ -4,6 +4,10 @@ class AuthenticationService
   # the goal is to replace the following method with:
   # def authenticated?(role, user_id)
   #
+  
+  def new_authenticated?(role, user_id)
+    user_id == 12345
+  end
 
   def authenticated?(user_id)
     user_id == 12345
